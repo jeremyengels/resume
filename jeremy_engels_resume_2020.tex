@@ -1,0 +1,110 @@
+\documentclass[11pt, letterpaper]{article}
+\usepackage[margin=0.45in]{geometry}
+\usepackage{amsmath,amssymb,enumitem,scrextend}
+\usepackage[hidelinks]{hyperref}
+
+% SET VARIOUS LENGTHS
+\setlength\parindent{0pt}
+\pagenumbering{gobble}
+\setlist[itemize]{noitemsep, nolistsep}
+\newcommand\smallspace{3.5pt}
+\newcommand\indentlength{0.25in}
+
+% DEFINE HORIZONTAL LINES
+\def\Vhrulefill{\leavevmode\leaders\hrule height 1ex depth \dimexpr0.1pt-0.9ex\hfill\kern0pt}
+
+% DEFINE CATEGORY ENVIRONMENT
+\newenvironment{category}[1]
+{
+	\vspace{\smallspace}
+	\noindent {\LARGE{\sc{#1}}} \hspace{2pt}
+	\Vhrulefill
+	\vspace{\smallspace}
+	\begin{addmargin}[\indentlength]{0in}
+}
+{
+	\end{addmargin}
+	\vspace{\smallspace}
+}
+
+% DEFINE EXPERIENCE ENVIRONMENT
+\newenvironment{experience}[4][3]{
+	\vspace{\smallspace}
+	\noindent\textbf{#2}
+	\hfill \textit{#3} \\
+	#4
+	\vspace{\smallspace}
+	\begin{itemize}
+	}
+	{
+	\end{itemize}
+	\vspace{\smallspace}
+}
+
+\begin{document}
+\begin{center}
+\begin{Huge}\begin{sc}Jeremy Engels\end{sc}\end{Huge} \\
+\vspace{3pt}
+\href{mailto:engels@g.ucla.edu}{\texttt{engels@ucla.edu}} \hspace{0.05in} $\bullet$ \hspace{0.05in} \href{tel:14158522880}{(415) 852-2880}  \hspace{0.05in} $\bullet$ \hspace{0.05in} \href{http://www.jeremyengels.com}{\texttt{jeremyengels.com}}
+
+U.S. Citizen
+\end{center}
+
+\vspace{-3pt}
+\begin{category}{Education}
+\begin{experience}{University of California, Los Angeles}{Anticipated June 2022}{M.S. Aerospace Engineering, focus in Control Systems}
+	\item \textit{GPA not yet established}
+	\end{itemize}
+\vspace{\smallspace}
+B.S. Mechanical Engineering \hfill \textit{2017 - 2021}
+	\begin{itemize}
+		\item Major Field GPA: \textbf{3.78}, Cumulative GPA: \textbf{3.61}
+\end{experience}
+\end{category}
+
+\begin{category}{Work Experience}
+\begin{experience}{The Aerospace Corporation -- Guidance \& Control Engineering Intern}{June 2021 - September 2021}{Controls engineer for satellite laser communication pointing, acquisition, and tracking system}
+	\item Created high-fidelity Simulink model of a lasercom pointing acquisition and tracking testbed
+	\begin{itemize}[noitemsep,nolistsep]
+		\item Compared different control laws and component choices in simulation to influence testbed design
+		\item Modeled and quantified the effects of various nonlinearities, disturbances, and time delays
+		\item Created low-order linear model of the testbed for rapid control law design and tuning
+		\item Validated high-fidelity simulation and linear model with hardware test data
+	\end{itemize}
+	\item Designed the ADACS system for a communications satellite  in an intern-led concept design study
+	\begin{itemize}[noitemsep,nolistsep]
+		\item Selected ADACS hardware to ensure fault-tolerance and redundancy, and sufficient performance
+		\item Created various designs for different constellation configurations (GEO, MEO, etc.)
+	\end{itemize}
+\end{experience}
+
+\begin{experience}{SpaceX -- Vehicle Engineering Intern}{June 2020 - September 2020}{Responsible Engineer for 3 mission-critical valves on the Falcon 9 vehicle.}
+	\item Increased percent of valves to pass acceptance testing by \textbf{over 2.5x} through design and operational changes
+	\begin{itemize}[noitemsep,nolistsep]
+		\item Investigated the root-cause faults to explain failures in testing, and inform valve redesigns
+		\item Prototyped, tested, and iterated dev units to decrease leakage and improve assembly process
+	\end{itemize}
+	\item Led numerous anomaly root-cause investigations to explain and overcome various risks in the F9 fleet
+\end{experience}
+
+\begin{experience}{NASA JPL -- Mechanical Engineering Intern}{April 2019 - September 2019}{Designed and built testbed for simulating the thermophysical properties of interiors of icy planets.}
+    \item Created full data acquisition system in LabVIEW to process and correct data from multiple sensors
+	\item Placed in charge of whole experiment as an intern, had to work very independently and do own research
+\end{experience}
+\end{category}
+
+\begin{category}{Project Experience}
+\begin{experience}{Bruin Racing -- President, Various Other Roles}{September 2017 - June 2020}{150-member student engineering organization which designs, builds, and competes 4 racecars each year.}
+    \item Managed and coordinated all operations: safety, finances, recruitment, training, corporate relations, etc.
+\end{experience}
+\end{category}
+
+[something about Baja here]
+
+\begin{category}{Skills}
+\begin{itemize}[noitemsep,nolistsep]
+	\item \textbf{Software \& Languages:} MATLAB, Simulink, C++, Python, LabVIEW, NX, SolidWorks, LaTeX
+	\item \textbf{Relevant Skills:} sensor/actuator implementation, control system simulation/analysis, system identification, model reduction, state space design, Monte Carlo simulation, robust control \& estimation
+\end{itemize}
+\end{category}
+\end{document}
